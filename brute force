@@ -1,0 +1,53 @@
+
+package sudoku.brute;
+
+import java.util.Arrays;
+
+import sudoku.util.Solver;
+import sudoku.util.board.SudokuBoard;
+
+/**
+ * A sudoku solver which employs sudoku.brute force to solve puzzles.
+ * Puzzles are solved through explicit enumeration of all possible board
+ * states. For instance, it starts by plugging a 1 into each empty cell
+ * and then, with each subsequent attempt, the guess is incremented as if
+ * a number in base <board size>.
+ */
+public class BruteForceSolver implements Solver{
+	
+	public void solve(SudokuBoard board)
+	{
+		/*for (int i=0; i< (board.size()* board.size()); i++){
+			if (board.valueAt(i) == 0) {
+				for (int num=1; num<=board.size(); num++){
+					if (board.isLegal(num, i)){ 
+						board.move(num, i);
+					break;}
+					if ((num==board.size()) && ((!board.isLegal(num, i)))){
+				System.out.println("I've gotten here");
+						
+						board.unmove();
+		}}}}
+		System.out.println(board);
+		board.isSolved();
+				
+				*/
+		//int posGuess = ((boardSize) ^ (emptyCells()));
+				
+				//if we know the board size, we know the number of guess possible. boardsize to the power of empty cells 
+				// equals the number of guess
+				//fill up all empty cells with 1s, then check is board is solved
+				// add one to the great big 1
+				//if not solved, take the history stack and unmove the number of moves that you just moved
+				//plug and unplug, plug to put in all the moves and unplug to take them out of the history of the stack
+				//if you incriment 11119 plus 1, then you have to deal with the carries so that the second 
+				//1 goes to 2 and the 9 goes back to 1
+				//keep doing it until you have a solved board or you have gone through all the permutations and 
+				//return that the board is unsolvables
+				
+				///EXAM:
+				//oen of each of the big oh problems, stuff with possets and adversaries, and something with sorting. 5 or 6 problems each with multiple sections
+				
+		
+	
+}}
